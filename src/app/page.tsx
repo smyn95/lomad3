@@ -1,78 +1,53 @@
 'use client'
-import axios from 'axios'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
+
+import React from 'react'
+import Image from 'next/image'
+
+import { Autoplay, Pagination, Virtual } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
 
-import Image from 'next/image'
 import Banner from './components/banner/page'
-import { bannerData, categoryData } from '../service/data'
 import ProductsList from './components/productsList/page'
+import { bannerData, categoryData } from '../service/data'
 import { orders } from '@/service/data'
-import React from 'react'
 
 export default function Home() {
-    const categoty = categoryData
+    const category = categoryData
+
     const order = orders.slice(0, 1).map((order) => {
         const { url, ...rest } = order
         return rest
     })
 
-    // const resultHeader = {
-    //     'Content-Type': 'application/json',
-    //     'user-id': 'tlsalduszz',
-    //     Hkey: 'f0e3d4988459457f',
-    // }
-
-    // const body = {
-    //     inBankCode: '088',
-    //     inAccount: '110326115965',
-    // }
-
-    // const onClickCertified = async () => {
-    //     try {
-    //         const result = await axios.post('api.hyphen.im/hb0081000378', body, {
-    //             headers: resultHeader,
-    //             withCredentials: true,
-    //         })
-    //         console.log(result)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
+    const mainSlides = Array.from({ length: 3 }).map((url, index) => `/img-main.jpeg`)
 
     return (
         <main id="wrapper" className="flex min-h-screen flex-col items-center justify-between">
-            {/* <button style={{ fontSize: '100px' }} onClick={onClickCertified}>
-        인증
-      </button> */}
             <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
-                speed={300}
-                loop={true}
-                touchRatio={1.5}
-                effect={'flip'}
-                pagination={{ clickable: true }}
+                virtual
+                modules={[Virtual, Autoplay, Pagination]}
                 className="mySwiper w-full h-[31.3rem]"
+                pagination={{ clickable: true }}
+                touchRatio={1.5}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: true,
+                }}
             >
-                <SwiperSlide>
-                    <Image src="/img-main.jpeg" alt="메인 이미지" fill />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src="/img-main.jpeg" alt="메인 이미지" fill />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src="/img-main.jpeg" alt="메인 이미지" fill />
-                </SwiperSlide>
+                {mainSlides.map((url, index) => (
+                    <SwiperSlide key={url} virtualIndex={index}>
+                        <Image src={url} alt="메인 이미지" fill priority />
+                    </SwiperSlide>
+                ))}
             </Swiper>
 
-            <section className="main-contents w-full z-20 ">
-                <div className="mobile-main-shop-category bg-white mt-[133.33%] sticky top-0 z-40">
-                    <ul className="flex items-center gap-5 h-[3.875rem] whitespace-nowrap overflow-x-auto">
-                        {categoty.map((item, i) => (
+            <section className="main-contents w-full z-20 bg-white">
+                <div className="mobile-main-shop-category sticky top-0 z-40">
+                    <ul className="flex items-center gap-5 h-[3.875rem] bg-white whitespace-nowrap overflow-x-auto">
+                        {category.map((item, i) => (
                             <li key={i} className="whitespace-nowrap text-sm font-bold">
                                 {item}
                             </li>

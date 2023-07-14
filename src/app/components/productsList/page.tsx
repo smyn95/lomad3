@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-type orders = {
-    items: any
+type Orders = {
+    items: any[]
 }
 
-export default function ProductsList({ items }: orders) {
+export default function ProductsList({ items }: Orders) {
     return (
         <>
             <ul className="item-wrap overflow-x-auto whitespace-nowrap">

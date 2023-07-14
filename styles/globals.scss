@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 @import 'svg_icons';
+@import 'colors';
 
 // 기본 폰트 설정
 $font-family-default: 'NEXON Gothic';
 $font-gmarket: 'GmarketSans';
 $font-spoqa: 'SpoqaHanSans';
 $font-color-default: #000;
+
+@keyframes slideUp {
+    from {
+        top: 3.125rem;
+        z-index: 2;
+    }
+    to {
+        top: -140px;
+        z-index: -50;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        top: -140px;
+    }
+    to {
+        top: 3.125rem;
+        z-index: 2;
+    }
+}
 
 body {
     position: relative;
@@ -23,7 +45,7 @@ img {
 }
 
 .swiper {
-    position: fixed !important;
+    position: sticky !important;
     top: 0;
 
     img {
@@ -164,6 +186,71 @@ img {
                 color: #df4a3c;
                 font-weight: bold;
             }
+        }
+    }
+}
+
+footer {
+    .footer-info-wrapper {
+        .info-btn {
+            span {
+                display: block;
+                width: 12px;
+                height: 7px;
+                background: iconUpnDown('646464') no-repeat center right;
+                transform: rotate(180deg);
+            }
+            &[data-open='false'] span {
+                transform: rotate(0deg);
+            }
+        }
+        .footer-info {
+            position: absolute;
+            top: -130px;
+            z-index: -50;
+            animation-duration: 0.3s;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            &[data-open='true'] {
+                animation-name: slideDown;
+            }
+            &[data-open='false'] {
+                animation-name: slideUp;
+            }
+        }
+    }
+
+    div {
+        border-bottom: 1px solid $gray-70;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        .tel-icon {
+            background: iconPhone('fff') no-repeat left bottom;
+        }
+
+        .mail-icon {
+            background: iconMail('fff') no-repeat left bottom;
+        }
+    }
+
+    .social-icons {
+        .instagram-icon {
+            background: iconInstagram('646464') no-repeat 50%;
+        }
+
+        .blog-icon {
+            background: iconBlog('646464') no-repeat 50%;
+        }
+
+        .apple-icon {
+            background: iconUserApple('646464') no-repeat 50%;
+        }
+
+        .google-store-icon {
+            background: iconUserGoogle('646464') no-repeat 50%;
         }
     }
 }
