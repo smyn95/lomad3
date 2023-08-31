@@ -46,9 +46,9 @@ export default function Home() {
 
             <section className="w-full z-20 bg-primaryWhite">
                 <div className="left-0 w-full z-50 sticky top-0">
-                    <ul className="flex items-center gap-5 h-[3.875rem] bg-white whitespace-nowrap overflow-x-auto bg-primaryWhite px-5  after:content-[''] after:w-20 after:h-[60px] after:absolute after:right-0 after:bg-[linear-gradient(270deg,#fff,hsla(0,0%,100%,0))] uppercase text-body2">
+                    <ul className="flex items-center gap-5 h-[3.875rem] bg-white whitespace-nowrap overflow-x-auto bg-primaryWhite px-5  after:content-[''] after:w-20 after:h-[60px] after:absolute after:right-0 after:bg-[linear-gradient(270deg,#fff,hsla(0,0%,100%,0))]">
                         {category.map((item, i) => (
-                            <li key={i} className="whitespace-nowrap text-sm font-bold">
+                            <li key={i} className="whitespace-nowrap font-bold uppercase text-body2">
                                 {item}
                             </li>
                         ))}

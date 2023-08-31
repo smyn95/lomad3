@@ -69,18 +69,18 @@
     }
     input[type='radio'] {
         &:checked {
-        @apply cursor-pointer border-[6px] border-primaryBlack;
+            @apply cursor-pointer border-[6px] border-primaryBlack;
         }
         &:disabled {
-        @apply bg-gray-20;
-        & ~ span {
-            @apply text-gray-50;
-        }
+            @apply bg-gray-20;
+            & ~ span {
+                @apply text-gray-50;
+            }
         }
     }
-    }
+}
 
-    @layer components {
+@layer components {
     .svg-text-container {
         @apply flex items-center gap-1;
     }
@@ -201,44 +201,5 @@
     }
     .btn-chip {
         @apply flex items-center justify-center rounded-[17px] bg-gray-20 px-3 py-[6px] text-body3 text-gray-60 hover:bg-gray-30 focus:bg-primaryBlack focus:text-primaryWhite active:bg-gray-80 disabled:bg-gray-20 disabled:text-gray-50;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        top: 3.125rem;
-        z-index: 2;
-    }
-    to {
-        top: -140px;
-        z-index: -50;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        top: -140px;
-    }
-    to {
-        top: 3.125rem;
-        z-index: 2;
-    }
-}
-
-
-.footer-info-wrapper {
-    .footer-info {
-        position: absolute;
-        top: -130px;
-        z-index: -50;
-        animation-duration: 0.3s;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        &[data-open='true'] {
-            animation-name: slideDown;
-        }
-        &[data-open='false'] {
-            animation-name: slideUp;
-        }
     }
 }

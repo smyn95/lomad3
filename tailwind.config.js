@@ -4,128 +4,142 @@ module.exports = {
     plugins: [],
     theme: {
         extend: {
-        fontFamily: {
-            nanumGothic: ['NanumGothic', 'sans-serif'],
-        },
+            fontFamily: {
+                nanumGothic: ['NanumGothic', 'sans-serif'],
+            },
+            keyframes: {
+                slideUp: {
+                    'from': { top: '3.125rem', zIndex: '2' },
+                    'to': { top: '-140px', zIndex: '-50' },
+				},
+                slideDown: {
+                    'from': { top: '-140px'},
+                    'to': { top: '3.125rem', zIndex: '10' },
+				}
+			},
+            animation: {
+                slideUp: 'slideUp 0.3s forwards normal',
+                slideDown: 'slideDown 0.3s forwards normal',
+            },
         },
         fontSize: {
         headline1: [
             '50px',
             {
-            lineHeight: '60px',
-            fontWeight: '700',
+                lineHeight: '60px',
+                fontWeight: '700',
             },
         ],
         headline2: [
             '40px',
             {
-            lineHeight: '48px',
-            fontWeight: '700',
+                lineHeight: '48px',
+                fontWeight: '700',
             },
         ],
         headline3: [
             '38px',
             {
-            lineHeight: '36px',
-            fontWeight: '700',
+                lineHeight: '36px',
+                fontWeight: '700',
             },
         ],
         title1: [
             '26px',
             {
-            lineHeight: '36.4px',
-            fontWeight: '700',
+                lineHeight: '36.4px',
+                fontWeight: '700',
             },
         ],
         title2: [
             '23px',
             {
-            lineHeight: '32.2px',
-            fontWeight: '700',
+                lineHeight: '32.2px',
+                fontWeight: '700',
             },
         ],
         title3: [
             '20px',
             {
-            lineHeight: '28px',
-            fontWeight: '700',
+                lineHeight: '28px',
+                fontWeight: '700',
             },
         ],
         title4: [
             '17px',
             {
-            lineHeight: '23.8px',
-            fontWeight: '700',
+                lineHeight: '23.8px',
+                fontWeight: '700',
             },
         ],
         body1: [
             '16px',
             {
-            lineHeight: '25.6px',
-            fontWeight: '400',
+                lineHeight: '25.6px',
+                fontWeight: '400',
             },
         ],
         body2: [
             '14px',
             {
-            lineHeight: '22.4px',
-            fontWeight: '400',
+                lineHeight: '22.4px',
+                fontWeight: '400',
             },
         ],
         body3: [
             '13px',
             {
-            lineHeight: '22.1px',
-            fontWeight: '400',
+                lineHeight: '22.1px',
+                fontWeight: '400',
             },
         ],
         body4: [
             '12px',
             {
-            lineHeight: '20.4px',
-            fontWeight: '400',
+                lineHeight: '20.4px',
+                fontWeight: '400',
             },
         ],
         caption: [
             '11px',
             {
-            lineHeight: '17.6px',
-            fontWeight: '400',
+                lineHeight: '17.6px',
+                fontWeight: '400',
             },
         ],
         label: [
             '10px',
             {
-            lineHeight: '16px',
-            fontWeight: '400',
+                lineHeight: '16px',
+                fontWeight: '400',
             },
         ],
         button1: [
             '19px',
             {
-            lineHeight: '30.4px',
-            fontWeight: '700',
+                lineHeight: '30.4px',
+                fontWeight: '700',
             },
         ],
         button2: [
             '16px',
             {
-            lineHeight: '25.6px',
-            fontWeight: '700',
+                lineHeight: '25.6px',
+                fontWeight: '700',
             },
         ],
         button3: [
             '14px',
             {
-            lineHeight: '22.4px',
-            fontWeight: '400',
+                lineHeight: '22.4px',
+                fontWeight: '400',
             },
         ],
         button4: [
             '12px',
             {
-            lineHeight: '20.4px',
-            fontWeight: '400',
+                lineHeight: '20.4px',
+                fontWeight: '400',
             },
         ],
         },
