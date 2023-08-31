@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import '../../styles/globals.scss'
+import '../../styles/globals.css'
 import Footer from './layout/footer'
 import Header from './layout/header'
 

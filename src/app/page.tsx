@@ -44,9 +44,9 @@ export default function Home() {
                 ))}
             </Swiper>
 
-            <section className="main-contents w-full z-20 bg-white">
-                <div className="mobile-main-shop-category sticky top-0 z-40">
-                    <ul className="flex items-center gap-5 h-[3.875rem] bg-white whitespace-nowrap overflow-x-auto">
+            <section className="w-full z-20 bg-primaryWhite">
+                <div className="left-0 w-full z-50 sticky top-0">
+                    <ul className="flex items-center gap-5 h-[3.875rem] bg-white whitespace-nowrap overflow-x-auto bg-primaryWhite px-5  after:content-[''] after:w-20 after:h-[60px] after:absolute after:right-0 after:bg-[linear-gradient(270deg,#fff,hsla(0,0%,100%,0))] uppercase text-body2">
                         {category.map((item, i) => (
                             <li key={i} className="whitespace-nowrap text-sm font-bold">
                                 {item}
@@ -55,7 +55,7 @@ export default function Home() {
                     </ul>
                 </div>
 
-                <div className="main-banner h-[22.5rem] w-full relative inline-table mb-14 bg-white z-20">
+                <div className="h-[22.5rem] w-full relative inline-table mb-14 bg-white z-20">
                     {bannerData.map((item, i) => (
                         <React.Fragment key={i}>
                             <Banner item={item} />

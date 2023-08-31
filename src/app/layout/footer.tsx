@@ -12,7 +12,7 @@ export default function Footer() {
 
     return (
         <footer className="px-10 py-10 bg-[#1e1e1e] text-[#8e8e8e] text-[.8125rem] font-light">
-            <div className="flex justify-between flex-wrap gap-5 pb-5">
+            <div className="flex justify-between flex-wrap gap-5 pb-5 border border-b-gray-70">
                 <span>
                     <i className="tel-icon block object-contain h-6 w-auto mb-2"></i>
                     <Link href="tel:02-523-0615" className="text-[#fff]">
@@ -28,7 +28,7 @@ export default function Footer() {
                 <p>평일 10:00 ~ 18:00 토, 일, 공휴일 휴무</p>
             </div>
 
-            <div>
+            <div className='border border-b-gray-70'>
                 <ul className="flex flex-wrap justify-between py-5 gap-y-4">
                     {['B2B 구매 문의', '스타트업 패키지', '입점 문의', '고객센터'].map((title, i) => (
                         <li key={i} className="w-2/4 font-bold">
@@ -43,21 +43,21 @@ export default function Footer() {
                 </ul>
             </div>
 
-            <div className="footer-info-wrapper border-none relative">
+            <div className="border-none relative">
                 <p className={`${openFooterInfo ? 'mb-40' : ''} flex justify-between py-5 duration-75`}>
                     <span>
                         <span className="pr-2">(주)리체</span> ©2023 Liche Co.
                     </span>
                     <button
                         onClick={handleInfoToggle}
-                        className="info-btn flex items-center gap-3"
+                        className="flex items-center gap-3"
                         data-open={openFooterInfo}
                     >
                         사업자 정보 <span></span>
                     </button>
                 </p>
 
-                <ul className="footer-info flex flex-col gap-1 pb-5" data-open={openFooterInfo}>
+                <ul className="absolute top-[-130px] flex flex-col gap-1 pb-5 -z-50" data-open={openFooterInfo}>
                     <li>서울특별시 서초구 바우뫼로 162, 4층, 6층</li>
                     <li>
                         대표이사 : 김홍규 <span className="pl-4">개인정보보호책임자 : 신보아</span>
