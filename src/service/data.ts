@@ -28,6 +28,21 @@ export const bannerData = [
 
 export const categoryData = ['New', 'Best', 'Sale', 'FURNITURE', 'LIGHTING', 'AUDIO', 'HOME APPLIANCES', 'LIFE']
 
+export const specialBrand = [
+    {
+        url: '/image 5.png',
+        brand: '앤 트레디션',
+    },
+    {
+        url: '/image 6.png',
+        brand: '무토',
+    },
+    {
+        url: '/image 7.png',
+        brand: 'USM',
+    }
+]
+
 export const orders = [
     {
         url: '/img-list-01.png',
