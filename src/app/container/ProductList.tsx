@@ -6,10 +6,17 @@ type Orders = {
 }
 
 export default function ProductsList({ items, size }: Orders) {
+    const halfItem = 'lg:w-[50%]';
+    let length = 6;
+
+    if (size == halfItem) {
+        length = 4;
+    }
+    const slicedItems = items.slice(0, length);
     return (
         <>
             <ul className="mb-[60px] overflow-x-auto whitespace-nowrap lg:flex lg:flex-wrap gap-y-8">
-                {items?.map((item: any, i: number) => (
+                {slicedItems?.map((item: any, i: number) => (
                     <li key={i} className={`w-[8rem] inline-block pr-2 ${size}`}>
                         {item?.url && (
                             <Image src={item.url} alt="상품 이미지" width={120} height={120} className="pb-3 lg:w-[232px]"/>

@@ -26,6 +26,37 @@ export const bannerData = [
     },
 ]
 
+export const bannerData2 = [
+    {
+        url: '/img-main-banner04.png',
+        title: '스웨덴 자연을 담은 제습기',
+        desc: '모든 온도와 습도를 측정하여 상황에 맞춰 제습하는 스마트 제습기',
+    }
+]
+
+export const bannerData3 = [
+    {
+        url: '/img-main-banner07.png',
+        title: '감성을 채워주는 스피커',
+        desc: '클립쉬의 더 쓰리 II는 따뜻한 소재와 색감을 더하여 디자인과 소리에 감성을 극대화 시켜주는 스피커입니다.',
+    },
+    {
+        url: '/img-main-banner08.png',
+        title: '자연과 함께하는 시간',
+        desc: '초록색의 푸릇함이 오롯이 느껴지는 계절에 로마드에서 소개하는 다양한 아웃도어 상품으로 자연을 만끽하는 시간을 가져보세요.',
+    },
+    {
+        url: '/img-main-banner03.png',
+        title: '혁신적인 용도의 다기능 트롤리',
+        desc: '1970년대 이탈리아에서 등장해 오늘날까지 생산되는 우수한 품질을 자랑합니다. 주방이나 식사 공간에서 편리하게 사용하세요.',
+    },
+    {
+        url: '/img-main-banner09.png',
+        title: '세계 최고 조명 회사의  스테디셀러',
+        desc: '1987년 처음 출시된 이후 전 세계적으로 많은 사랑을 받는 조명입니다.',
+    },
+]
+
 export const categoryData = ['New', 'Best', 'Sale', 'FURNITURE', 'LIGHTING', 'AUDIO', 'HOME APPLIANCES', 'LIFE']
 
 export const categoryDetail = [
@@ -129,4 +160,14 @@ export const orders = [
         bnplPrice: '37,000',
         bnplDiscountRate: '0',
     },
+    {
+        url: '/img-list-02.png',
+        brand: 'GUBI',
+        name: '팀버라인 플로어램프',
+        lumpsumPrice: '1,199,000',
+        installment_period: '36',
+        discountRate: '0',
+        bnplPrice: '37,000',
+        bnplDiscountRate: '0',
+    }
 ]

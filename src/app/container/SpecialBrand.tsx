@@ -9,7 +9,7 @@ export default function SpecialBrand() {
         <ul className='flex gap-[10px]'>
           {specialBrand.map(({url, brand}, i) => (
             i <= 2 && (
-            <li className='flex min-w-[220px] w-full flex-col items-center gap-5 text-body1 cursor-pointer' key={i}>
+            <li className='flex w-1/3 w-full flex-col items-center gap-5 text-body1 cursor-pointer' key={i}>
               <Image
                 src={url}
                 alt=""
