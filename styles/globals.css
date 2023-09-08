@@ -32,9 +32,8 @@
         display: none;
     }
     .swiper {
-        position: sticky !important;
+        position: sticky;
         top: 0;
-
         img {
             position: relative !important;
             object-fit: contain;

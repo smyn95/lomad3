@@ -1,9 +1,14 @@
+import { categoryDetail } from '@/service/data'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import SwiperContainer from '../container/Swiper'
 
 export default function Header() {
+    const mainSlides = Array.from({ length: 3 }).map((url, index) => `/img-main.jpeg`)
+
     return (
-        <header className="fixed px-5 w-full h-14 z-10 top-0 left-0 lg:px-20 lg:h-max lg:static lg:bg-primaryWhite lg:border-b border-gray-30 max-w-[1920px]">
+        <header className="fixed px-5 w-full h-14 z-10 top-0 left-0 lg:px-20 lg:h-max lg:bg-primaryWhite max-w-[1920px] lg:relative">
             <div className='flex justify-between items-center lg:h-[100px] w-full h-full'>
                 <span className="min-w-[8.4375rem]">
                     <Image src="/img-lomad-logo.svg" width={60} height={18} alt="로고" className='lg:w-[100px]'/>
@@ -36,7 +41,7 @@ export default function Header() {
                     </button>
                 </section>
             </div>
-            <section className='hidden h-[78px] w-full uppercase lg:flex justify-center text-body2 relative items-center'>
+            <section className='hidden h-[78px] w-full uppercase lg:flex justify-center text-body2 relative items-center peer'>
                 <ul className='flex gap-3 mr-6 font-bold'>
                     <li><Link href='/'>FURNITURE</Link></li>
                     <li><Link href='/'>LIGHTING</Link></li>
@@ -54,6 +59,36 @@ export default function Header() {
                     <li><Link href='/'>EVENT</Link></li>
                     <li><Link href='/'>BRAND</Link></li>
                 </ul>
+            </section>
+            <section className='absolute w-full bg-primaryWhite left-1/2 -translate-x-1/2 min-h-[494px] z-20 h-full lg:flex justify-center border-t border-gray-30 opacity-0 peer-hover:opacity-100 transition-opacity duration-200 hover:opacity-100 hidden'>
+                <div className='w-[800px] h-full p-7 flex flex-col border-r border-gray-30'>
+                    <h1 className='uppercase text-button3 font-bold flex pb-7 cursor-pointer'>
+                        ALL FURNITURE
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.5 15.5C8.37 15.5 8.24 15.45 8.15 15.35C7.95 15.15 7.95 14.84 8.15 14.64L12.8 9.98998L8.15 5.33998C7.95 5.13998 7.95 4.82998 8.15 4.62998C8.35 4.42998 8.66 4.42998 8.86 4.62998L13.86 9.62998C14.06 9.82998 14.06 10.14 13.86 10.34L8.86 15.34C8.76 15.44 8.63 15.49 8.51 15.49L8.5 15.5Z"/>
+                        </svg>
+                    </h1>
+                    <ul className='flex flex-wrap gap-y-7'>
+                        {categoryDetail.map (({title, list}, index) => (
+                            <li key={title} className='w-1/4 flex flex-col gap-2'>
+                                <h2 className='text-body2 font-bold cursor-pointer'>{title}</h2>
+                                <ul className='flex flex-col gap-1'>
+                                    {list.map ((item, index) => (
+                                        <li key={item} className='text-body2 text-gray-60 cursor-pointer'>{item}</li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className='w-[304px] h-full p-7'>
+                    <SwiperContainer data={mainSlides} style={'w-[248px] h-[158px] rounded-md'} />
+                    <span className='text-body3 pt-2 block'>아르떼미데 전 상품10% 할인</span>
+                    <ul className='flex gap-2 rounded-md mt-7'>
+                        <li><Image src={'/image 14.png'} width={120} height={120} alt=""/> <span className='text-body3 pt-2 block'>B&O 베오플레이 HX</span></li>
+                        <li><Image src={'/img-area.png'} width={120} height={120} alt=""/> <span className='text-body3  pt-2 block'>Berg&Ridge</span></li>
+                    </ul>
+                </div>
             </section>
 
         </header>

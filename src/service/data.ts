@@ -28,6 +28,41 @@ export const bannerData = [
 
 export const categoryData = ['New', 'Best', 'Sale', 'FURNITURE', 'LIGHTING', 'AUDIO', 'HOME APPLIANCES', 'LIFE']
 
+export const categoryDetail = [
+    {
+        title: '소파',
+        list: ['1인 소파', '2~3인 소파', '4인 이상 소파', '리클라이너 소파', '모듈 소파']
+    },
+    {
+        title: '테이블',
+        list: ['다이닝 테이블', '사이드 테이블', '소파/커피 테이블', '바 테이블']
+    },
+    {
+        title: '체어/스툴',
+        list: ['다이닝체어', '라운지체어', '오피스체어', '스툴', '벤치']
+    },
+    {
+        title: '스토리지',
+        list: ['책장', '수납장', '거실/TV장', '장식장', '옷장', '화장대']
+    },
+    {
+        title: '선반/행거',
+        list: ['선반', '행거', '후크', '파티션']
+    },
+    {
+        title: '침실 가구',
+        list: ['침대', '매트리스/토퍼']
+    },
+    {
+        title: '거울',
+        list: ['전신거울', '벽거울']
+    },
+    {
+        title: '시니어라이프',
+        list: ['전동 침대', '전동 리클라이너']
+    },
+]
+
 export const specialBrand = [
     {
         url: '/image 5.png',
