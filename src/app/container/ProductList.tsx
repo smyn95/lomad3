@@ -2,15 +2,15 @@ import Image from 'next/image'
 
 type Orders = {
     items: any[];
-    size?: number;
+    size?: string;
 }
 
 export default function ProductsList({ items, size }: Orders) {
     return (
         <>
-            <ul className="mb-[60px] overflow-x-auto whitespace-nowrap">
+            <ul className="mb-[60px] overflow-x-auto whitespace-nowrap lg:flex lg:flex-wrap gap-y-8">
                 {items?.map((item: any, i: number) => (
-                    <li key={i} className={`w-[8rem] inline-block pr-2 lg:w-[${size}%]`}>
+                    <li key={i} className={`w-[8rem] inline-block pr-2 ${size}`}>
                         {item?.url && (
                             <Image src={item.url} alt="상품 이미지" width={120} height={120} className="pb-3 lg:w-[232px]"/>
                         )}
@@ -39,4 +39,3 @@ export default function ProductsList({ items, size }: Orders) {
         </>
     )
 }
-                // {new Array(props.length).fill(1).map((_, i) => (

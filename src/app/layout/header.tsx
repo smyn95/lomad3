@@ -8,7 +8,7 @@ export default function Header() {
     const mainSlides = Array.from({ length: 3 }).map((url, index) => `/img-main.jpeg`)
 
     return (
-        <header className="fixed px-5 w-full h-14 z-10 top-0 left-0 lg:px-20 lg:h-max lg:bg-primaryWhite max-w-[1920px] lg:relative">
+        <header className="fixed px-5 w-full h-14 z-10 top-0 left-0 lg:px-20 lg:h-max lg:bg-primaryWhite lg:max-w-[1920px] lg:relative lg:border-b border-gray-30">
             <div className='flex justify-between items-center lg:h-[100px] w-full h-full'>
                 <span className="min-w-[8.4375rem]">
                     <Image src="/img-lomad-logo.svg" width={60} height={18} alt="로고" className='lg:w-[100px]'/>
@@ -60,7 +60,8 @@ export default function Header() {
                     <li><Link href='/'>BRAND</Link></li>
                 </ul>
             </section>
-            <section className='absolute w-full bg-primaryWhite left-1/2 -translate-x-1/2 min-h-[494px] z-20 h-full lg:flex justify-center border-t border-gray-30 opacity-0 peer-hover:opacity-100 transition-opacity duration-200 hover:opacity-100 hidden'>
+
+            <section className='absolute w-full bg-primaryWhite left-1/2 -translate-x-1/2 min-h-[494px] z-20 h-full justify-center border-t border-gray-30 lg:peer-hover:flex transition-all hidden hover:flex'>
                 <div className='w-[800px] h-full p-7 flex flex-col border-r border-gray-30'>
                     <h1 className='uppercase text-button3 font-bold flex pb-7 cursor-pointer'>
                         ALL FURNITURE
@@ -74,7 +75,7 @@ export default function Header() {
                                 <h2 className='text-body2 font-bold cursor-pointer'>{title}</h2>
                                 <ul className='flex flex-col gap-1'>
                                     {list.map ((item, index) => (
-                                        <li key={item} className='text-body2 text-gray-60 cursor-pointer'>{item}</li>
+                                        <li key={item} className='text-body2 text-gray-60 cursor-pointer hover:text-blue-30'>{item}</li>
                                     ))}
                                 </ul>
                             </li>
@@ -90,7 +91,6 @@ export default function Header() {
                     </ul>
                 </div>
             </section>
-
         </header>
     )
 }
