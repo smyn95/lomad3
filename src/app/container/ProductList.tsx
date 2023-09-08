@@ -19,7 +19,7 @@ export default function ProductsList({ items, size }: Orders) {
                 {slicedItems?.map((item: any, i: number) => (
                     <li key={i} className={`w-[8rem] inline-block pr-2 ${size}`}>
                         {item?.url && (
-                            <Image src={item.url} alt="상품 이미지" width={120} height={120} className="pb-3 xl:w-[232px]"/>
+                            <Image src={item.url} alt="상품 이미지" width={240} height={240} className="pb-3 xl:w-[232px] !object-contain "/>
                         )}
 
                         <ul className="flex flex-col">
