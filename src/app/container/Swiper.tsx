@@ -15,7 +15,7 @@ type Props = {
 export default function SwiperContainer({ data, style } : Props) {
     return (
         <>
-          <Swiper
+            <Swiper
                 virtual
                 modules={[Virtual, Autoplay, Pagination]}
                 className={style}

@@ -21,8 +21,8 @@ export default function Home() {
     const mainSlides = Array.from({ length: 3 }).map((url, index) => `/img-main.jpeg`)
 
     return (
-        <main className='lg:px-20 lg:py-12 lg:flex lg:gap-12 lg:max-w-[1920px] w-screen'>
-            <section className='hidden lg:block lg:w-[43%]'>
+        <main className='xl:px-20 xl:py-12 xl:flex xl:gap-12 xl:max-w-[1920px] w-screen'>
+            <section className='hidden xl:block xl:w-[43%]'>
                 <Image src="/promotion_banner01.png" width={712} height={712} alt="메인 배너" />
                 <Image src="/promotion_banner02.png" width={712} height={712} alt="메인 배너" />
                 <Image src="/promotion_banner03.png" width={712} height={712} alt="메인 배너" />
@@ -31,15 +31,18 @@ export default function Home() {
                     <Image src="/main-banner01.png" width={712} height={712} alt="메인 배너" />
                     <h1 className="text-title3 pt-6 pb-1">이탈리아를 대표하는 핸드메이드 조명</h1>
                     <p className="text-body2 pb-6">친환경 소재를 사용하며 수작업을 통해 제작되는 특별한 하이엔드 조명을 만나보세요.</p>
-                    <ProductsList items={orders} size={'lg:w-[33.33%]'} />
+                    <ProductsList items={orders} size={'xl:w-[33.33%]'} />
                 </>
+                <h1 className='uppercase text-headline1'>Review</h1>
+                <p className='text-body1'>앞선 구매자들의 후기에서 영감을 얻어보세요.</p>
+                <div className='w-full h-[45.875rem] bg-gray-30 mt-8'></div>
             </section>
 
-            <section className="flex min-h-screen flex-col items-center justify-between lg:w-[27%] w-full">
-                <SwiperContainer data={mainSlides} style={'w-full h-[31.3rem] lg:!hidden'} />
+            <section className="flex min-h-screen flex-col items-center justify-between xl:w-[27%] w-full">
+                <SwiperContainer data={mainSlides} style={'w-full h-[31.3rem] xl:!hidden'}/>
 
-                <section className="w-full z-20 bg-primaryWhite lg:z-0">
-                    <div className="left-0 w-full z-50 sticky top-0 lg:hidden">
+                <section className="w-full z-20 bg-primaryWhite xl:z-0">
+                    <div className="left-0 w-full z-50 sticky top-0 xl:hidden">
                         <ul className="flex items-center gap-5 h-[3.875rem] bg-white whitespace-nowrap overflow-x-auto bg-primaryWhite px-5  after:content-[''] after:w-20 after:h-[60px] after:absolute after:right-0 after:bg-[linear-gradient(270deg,#fff,hsla(0,0%,100%,0))]">
                             {category.map((item, i) => (
                                 <li key={i} className="whitespace-nowrap font-bold uppercase text-body2">
@@ -53,8 +56,8 @@ export default function Home() {
                         {bannerData.map((item, i) => (
                             <React.Fragment key={i}>
                                 <Banner item={item} />
-                                <div className="ps-8 overflow-x-auto w-screen lg:ps-0 lg:w-full">
-                                    {i === 0 ? <ProductsList items={orders} size={'lg:w-[50%]'} /> : <ProductsList items={order} size={'lg:w-[50%]'}/>}
+                                <div className="ps-8 overflow-x-auto w-screen xl:ps-0 xl:w-full">
+                                    {i === 0 ? <ProductsList items={orders} size={'xl:w-[50%]'} /> : <ProductsList items={order} size={'xl:w-[50%]'}/>}
                                 </div>
                             </React.Fragment>
                         ))}
@@ -62,9 +65,9 @@ export default function Home() {
                 </section>
             </section>
 
-            <section className="lg:flex min-h-screen flex-col items-center justify-between lg:w-[27%] hidden">
-                <section className="w-full z-20 bg-primaryWhite lg:z-0">
-                    <div className="left-0 w-full z-50 sticky top-0 lg:hidden">
+            <section className="xl:flex min-h-screen flex-col items-center justify-between xl:w-[27%] hidden">
+                <section className="w-full z-20 bg-primaryWhite xl:z-0">
+                    <div className="left-0 w-full z-50 sticky top-0 xl:hidden">
                         <ul className="flex items-center gap-5 h-[3.875rem] bg-white whitespace-nowrap overflow-x-auto bg-primaryWhite px-5  after:content-[''] after:w-20 after:h-[60px] after:absolute after:right-0 after:bg-[linear-gradient(270deg,#fff,hsla(0,0%,100%,0))]">
                             {category.map((item, i) => (
                                 <li key={i} className="whitespace-nowrap font-bold uppercase text-body2">
@@ -89,8 +92,8 @@ export default function Home() {
                         {bannerData3.map((item, i) => (
                             <React.Fragment key={i}>
                                 <Banner item={item} />
-                                <div className="ps-8 overflow-x-auto w-screen lg:ps-0 lg:w-full">
-                                    {i === 0 ? <ProductsList items={orders} size={'lg:w-[50%]'} /> : <ProductsList items={order} size={'lg:w-[50%]'}/>}
+                                <div className="ps-8 overflow-x-auto w-screen xl:ps-0 xl:w-full">
+                                    {i === 0 ? <ProductsList items={orders} size={'xl:w-[50%]'} /> : <ProductsList items={order} size={'xl:w-[50%]'}/>}
                                 </div>
                             </React.Fragment>
                         ))}

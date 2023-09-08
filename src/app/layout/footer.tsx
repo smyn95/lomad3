@@ -12,9 +12,9 @@ export default function Footer() {
     }
 
     return (
-        <footer className="px-10 py-10 bg-gray-90 text-gray-60 text-body3 relative">
-            <div className="flex justify-between flex-wrap gap-5 pb-5 border-b border-b-gray-70">
-                <span className='flex flex-col gap-1'>
+        <footer className="px-10 py-10 bg-gray-90 text-gray-60 text-body3 relative xl:mt-[-80px]">
+            <div className="flex justify-between flex-wrap gap-5 pb-5 border-b border-b-gray-70 xl:justify-start xl:gap-[60px]">
+                <span className='flex flex-col gap-1 xl:flex-row xl:items-center xl:gap-2'>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 1C18.55 1 19 1.45 19 2V22C19 22.55 18.55 23 18 23H6C5.45 23 5 22.55 5 22V2C5 1.45 5.45 1 6 1H18ZM18 0H6C4.9 0 4 0.9 4 2V22C4 23.1 4.9 24 6 24H18C19.1 24 20 23.1 20 22V2C20 0.9 19.1 0 18 0Z"  fill="white"/>
                         <path d="M12 5C12.5523 5 13 4.55228 13 4C13 3.44772 12.5523 3 12 3C11.4477 3 11 3.44772 11 4C11 4.55228 11.4477 5 12 5Z"  fill="white"/>
@@ -23,7 +23,7 @@ export default function Footer() {
                         02-523-0615
                     </Link>
                 </span>
-                <span className='flex flex-col gap-1'>
+                <span className='flex flex-col gap-1 xl:flex-row xl:items-center xl:gap-2'>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 4C22.55 4 23 4.45 23 5V19C23 19.55 22.55 20 22 20H2C1.45 20 1 19.55 1 19V5C1 4.45 1.45 4 2 4H22ZM22 3H2C0.9 3 0 3.9 0 5V19C0 20.1 0.9 21 2 21H22C23.1 21 24 20.1 24 19V5C24 3.9 23.1 3 22 3Z" fill="white"/>
                         <path d="M12 14.5C11.87 14.5 11.74 14.45 11.65 14.35L4.65 7.34999C4.45 7.14999 4.45 6.83999 4.65 6.63999C4.85 6.43999 5.16 6.43999 5.36 6.63999L12.01 13.29L18.66 6.63999C18.86 6.43999 19.17 6.43999 19.37 6.63999C19.57 6.83999 19.57 7.14999 19.37 7.34999L12.37 14.35C12.27 14.45 12.14 14.5 12.02 14.5H12Z" fill="white"/>
@@ -37,13 +37,13 @@ export default function Footer() {
             </div>
 
             <div className='border-b border-b-gray-70'>
-                <ul className="flex flex-wrap justify-between py-5 gap-y-4">
+                <ul className="flex flex-wrap justify-between py-5 gap-y-4 xl:flex-row xl:justify-start xl:items-center xl:gap-5">
                     {['B2B 구매 문의', '스타트업 패키지', '입점 문의', '고객센터'].map((title, i) => (
-                        <li key={i} className="w-2/4 font-bold">
+                        <li key={i} className="w-2/4 font-bold xl:w-auto">
                             {title}
                         </li>
                     ))}
-                    <li className="pt-6 flex gap-6">
+                    <li className="pt-6 flex gap- xl:pt-0 xl:gap-5 xl:ml-[60px]">
                         <span>회사소개</span>
                         <span>이용약관</span>
                         <span className="font-bold">개인정보처리방침</span>
@@ -58,7 +58,7 @@ export default function Footer() {
                     </span>
                     <button
                         onClick={handleInfoToggle}
-                        className="flex items-center"
+                        className="flex items-center xl:hidden"
                         data-open={openFooterInfo}
                     >
                         사업자 정보 
@@ -70,24 +70,23 @@ export default function Footer() {
                     </button>
                 </p>
 
-                <ul className={`absolute top-[-130px] duration-300 direction-normal flex flex-col gap-1 pb-5 -z-50 ${openFooterInfo ? 'animate-slideDown' : 'animate-slideUp'}`} data-open={openFooterInfo}>
-                    <li>서울특별시 서초구 바우뫼로 162, 4층, 6층</li>
-                    <li>
+                <ul className={`absolute top-[-130px] duration-300 direction-normal flex flex-col gap-1 pb-5 -z-50 ${openFooterInfo ? 'animate-slideDown' : 'animate-slideUp'} xl:static xl:w-[700px] xl:flex-wrap xl:flex-row`} data-open={openFooterInfo}>
+                    <li className='w-auto'>서울특별시 서초구 바우뫼로 162, 4층, 6층</li>
+                    <li className='w-auto'>
                         대표이사 : 김홍규 <span className="pl-4">개인정보보호책임자 : 신보아</span>
                     </li>
-                    <li>사업자등록번호: 723-86-01708</li>
-                    <li>
+                    <li className='w-auto'>사업자등록번호: 723-86-01708</li>
+                    <li className='w-auto'>
                         <Link href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=7238601708" target="_blank">
                             [사업자정보확인]
                         </Link>
                     </li>
-                    <li>통신판매업 신고 : 2022-서울서초-1820</li>
-                    <li>팩스 : 02-525-0613</li>
-                    <li>메일 : official@liche.co.kr</li>
+                    <li className='w-auto'>통신판매업 신고 : 2022-서울서초-1820</li>
+                    <li className='w-auto'>팩스 : 02-525-0613</li>
                 </ul>
             </div>
 
-            <div className="social-icons pt-5 flex gap-3">
+            <div className="social-icons pt-5 flex gap-3 xl:pt-0">
                 <Link
                     href=""
                     className="flex items-center w-8 h-8 mb-2 border border-solid rounded-3xl border-gray-70 justify-center"

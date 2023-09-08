@@ -24,6 +24,11 @@ export const bannerData = [
         title: '삶을 위한 최고의 공식',
         desc: '아름답고 클래식한 작품으로 모든 공간을 특별한 사운드로 채워줍니다.',
     },
+    {
+        url: '/img-main-banner08.png',
+        title: '자연과 함께하는 시간',
+        desc: '초록색의 푸릇함이 오롯이 느껴지는 계절에 로마드에서 소개하는 다양한 아웃도어 상품으로 자연을 만끽하는 시간을 가져보세요.',
+    },
 ]
 
 export const bannerData2 = [
@@ -55,6 +60,11 @@ export const bannerData3 = [
         title: '세계 최고 조명 회사의  스테디셀러',
         desc: '1987년 처음 출시된 이후 전 세계적으로 많은 사랑을 받는 조명입니다.',
     },
+    {
+        url: '/img-main-banner02.png',
+        title: '분위기를 가장 쉽게 바꾸는 방법',
+        desc: '조명 하나만 있으면 익숙했던 공간도 새로운 무드를 입힐 수 있습니다. 분위기를 바꿔 줄 다양한 조명을 만나보세요!',
+    }
 ]
 
 export const categoryData = ['New', 'Best', 'Sale', 'FURNITURE', 'LIGHTING', 'AUDIO', 'HOME APPLIANCES', 'LIFE']
